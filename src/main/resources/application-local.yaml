@@ -2,5 +2,9 @@ spring:
   config:
     activate:
       on-profile: local
+  graphql:
+    graphiql:
+      enabled: true
 server:
   port: 8181
+

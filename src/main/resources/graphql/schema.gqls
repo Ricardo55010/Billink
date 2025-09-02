@@ -1,0 +1,18 @@
+type User {
+    id: ID!
+}
+
+type Budget {
+    id: ID!
+    title: String!
+}
+
+# The Root Query for the application
+type Query {
+    getBudget(count: Int, offset: Int): [Budget]!
+}
+
+# The Root Mutation for the application
+type Mutation {
+    createBudget(title: String!) : Budget!
+}
