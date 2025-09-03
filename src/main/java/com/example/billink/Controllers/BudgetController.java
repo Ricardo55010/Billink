@@ -1,6 +1,8 @@
 package com.example.billink.Controllers;
 
+import com.example.billink.Exceptions.NoSuchElementException;
 import com.example.billink.Models.Budget;
+import com.example.billink.Services.BudgetService;
 import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.MutationMapping;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
@@ -13,16 +15,15 @@ import java.util.List;
 
 @Controller
 public class BudgetController {
-static List<Budget> list = new ArrayList<>();
-    static {
-        list.add(new Budget("Ejemplo 1","1"));
-        list.add(new Budget("Ejemplo 2","2"));
-        list.add(new Budget("Ejemplo 3","3"));
+    BudgetService budgetService;
+    public BudgetController(BudgetService budgetService){
+        this.budgetService = budgetService;
     }
     @QueryMapping
-    public List<Budget> getBudget(@Argument int count, @Argument int offset ){
-
-        return list;
+    public List<Budget> getBudget(@Argument int count, @Argument int offset ) throws NoSuchElementException{
+        if(count ==1)
+            throw new NoSuchElementException("No hay");
+        return budgetService.getBudget(count,offset);
     }
 /*
 * {
@@ -34,8 +35,7 @@ static List<Budget> list = new ArrayList<>();
 }*/
     @MutationMapping
     public Budget createBudget(@Argument String title){
-        Budget budget = new Budget(title, "2");
-        list.add(budget);
+        Budget budget = budgetService.createBudget(title);
         return budget;
     }
     /*

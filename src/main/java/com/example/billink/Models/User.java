@@ -4,6 +4,7 @@ public class User{
     String name;
     Integer age;
     Integer wage;
+    String employment;
 
     public User(String name, Integer age, Integer wage) {
         this.name = name;
