@@ -4,6 +4,7 @@ import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
 import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.core.TopicExchange;
+import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -25,4 +26,10 @@ public class RabbitMQConfig {
     public Binding binding(Queue myQueue, TopicExchange myExchange) {
         return BindingBuilder.bind(myQueue).to(myExchange).with("my.routing.key");
     }
+
+    @RabbitListener(queues = QUEUE_NAME)
+    public void listen(String message) {
+        System.out.println("Received message: " + message);
+    }
+
 }

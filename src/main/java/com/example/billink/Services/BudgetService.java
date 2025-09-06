@@ -25,7 +25,6 @@ public class BudgetService {
 
     public List<Budget> getBudget( int count,  int offset ){
         logger.info("BudgetService.getBudget: Start ");
-        rabbitTemplate.convertAndSend("myExchange","my.routing.key", new String("Starting communication with another microservice"));
         return budgetRepository.getBudget(count, offset);
     }
 
