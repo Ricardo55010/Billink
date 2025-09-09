@@ -25,12 +25,12 @@ public class BudgetService {
 
     public List<Budget> getBudget( int count,  int offset ){
         logger.info("BudgetService.getBudget: Start ");
-        return budgetRepository.getBudget(count, offset);
+        return budgetRepository.findAll();
     }
 
     public Budget createBudget(String title){
-        Budget budget = new Budget(title, "2");
-        budgetRepository.createBudget(budget);
+        Budget budget = new Budget(title, 1L);
+        budgetRepository.save(budget);
         return budget;
     }
 }
