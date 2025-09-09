@@ -1,15 +1,24 @@
-package com.example.billink.Models;
+package com.example.billink.Models;import jakarta.persistence.*;
+import org.springframework.graphql.data.federation.EntityMapping;
 
+@Entity
+@Table(name="Budget")
 public class Budget {
-    private String id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="Id")
+    private Long id;
+    @Column(name="title")
     private String title;
+    @Column(name="userId")
+    private Long userId;
 
-    public Budget(String title, String id) {
+    public Budget(String title,Long userId) {
         this.title = title;
-        this.id = id;
+        this.userId = userId;
     }
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
@@ -17,7 +26,7 @@ public class Budget {
         return title;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
