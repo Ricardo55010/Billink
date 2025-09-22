@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c3488177-bfdf-46f3-86cf-05d007a42933" name="Changes" comment="add: adding aspects for logging">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/billink/Configurations/WebMvcConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/billink/Interceptors/FilterQuery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/billink/IntegrationTest/BudgetTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/billink/UnitTest/BudgetControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-local.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-local.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/billink/Test/BudgetControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/billink/MockitoTest/BudgetControllerTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Ricardo55010&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Ricardo55010/Billink.git&quot;,
+    &quot;accountId&quot;: &quot;331bd298-e883-4447-9c8a-1f6d1f8f81d5&quot;
+  }
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="31UNGuOwuyjpJpR9SM9gHZop46p" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.BillinkApplication.executor": "Run",
+    "JUnit.BillinkApplicationTests.executor": "Run",
+    "JUnit.BudgetControllerTest.executor": "Run",
+    "JUnit.BudgetControllerTest.testGetUsers.executor": "Run",
+    "JUnit.UserControllerTest.executor": "Run",
+    "JUnit.UserTest.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/downloads/billink/src/test/java/com/example/billink",
+    "settings.editor.selected.configurable": "configurable.group.build"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\downloads\billink\src\test\java\com\example\billink" />
+      <recent name="D:\downloads\billink\src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\downloads\billink\src\test\" />
+      <recent name="D:\downloads\billink" />
+      <recent name="D:\downloads\billink\src\main\resources" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.billink" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.billink.Test" />
+      <recent name="com.example.billink.DTO" />
+      <recent name="com.example.billink.Models" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.UserTest">
+    <configuration name="BillinkApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <envs>
+        <env name="SPRING_PROFILES_ACTIVE" value="local" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="com.example.billink.BillinkApplication" />
+      <module name="billink" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.billink.MockitoTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BudgetControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="billink" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.billink.MockitoTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.billink.Test" />
+      <option name="MAIN_CLASS_NAME" value="com.example.billink.MockitoTest.BudgetControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BudgetControllerTest.testGetUsers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="billink" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.billink.UnitTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.billink.UnitTest" />
+      <option name="MAIN_CLASS_NAME" value="com.example.billink.UnitTest.BudgetControllerTest" />
+      <option name="METHOD_NAME" value="testGetUsers" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="billink" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.billink.MockitoTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.billink" />
+      <option name="MAIN_CLASS_NAME" value="com.example.billink.UserControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="billink" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.billink.IntegrationTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.billink.IntegrationTest" />
+      <option name="MAIN_CLASS_NAME" value="com.example.billink.IntegrationTest.UserTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.BillinkApplication" />
+      <item itemvalue="JUnit.BudgetControllerTest.testGetUsers" />
+      <item itemvalue="JUnit.UserTest" />
+      <item itemvalue="JUnit.BudgetControllerTest" />
+      <item itemvalue="JUnit.UserControllerTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.UserTest" />
+        <item itemvalue="JUnit.BudgetControllerTest.testGetUsers" />
+        <item itemvalue="JUnit.BudgetControllerTest" />
+        <item itemvalue="Application.BillinkApplication" />
+        <item itemvalue="JUnit.UserControllerTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c3488177-bfdf-46f3-86cf-05d007a42933" name="Changes" comment="" />
+      <created>1755574607359</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1755574607359</updated>
+    </task>
+    <task id="LOCAL-00001" summary="start: &quot;New project for personal finance&quot;">
+      <option name="closed" value="true" />
+      <created>1755574807204</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1755574807204</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add : &quot;foundation of the user , model and controller plus test&quot;">
+      <option name="closed" value="true" />
+      <created>1755577474875</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1755577474875</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add : &quot;user service and implementation with dependency injection&quot;">
+      <option name="closed" value="true" />
+      <created>1756182941506</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1756182941506</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add : profiles for example (needed to define a SPRING_PROFILES_ACTIVE variable">
+      <option name="closed" value="true" />
+      <created>1756696046603</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1756696046603</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add : endpoint with graphql">
+      <option name="closed" value="true" />
+      <created>1756787147619</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1756787147619</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add : use of custom exception handler">
+      <option name="closed" value="true" />
+      <created>1756872767980</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1756872767980</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add : test case with mockit">
+      <option name="closed" value="true" />
+      <created>1756957179212</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1756957179212</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add : producer for rabbitmq">
+      <option name="closed" value="true" />
+      <created>1756959474053</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1756959474053</updated>
+    </task>
+    <task id="LOCAL-00009" summary="edit: binded queue to exchange">
+      <option name="closed" value="true" />
+      <created>1757044532317</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1757044532317</updated>
+    </task>
+    <task id="LOCAL-00010" summary="edit: reverted this service from producer to consumer">
+      <option name="closed" value="true" />
+      <created>1757137260102</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1757137260102</updated>
+    </task>
+    <task id="LOCAL-00011" summary="edit: removed remnants of this service being a producer">
+      <option name="closed" value="true" />
+      <created>1757138324087</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1757138324087</updated>
+    </task>
+    <task id="LOCAL-00012" summary="edit: added config to read UserDTO produced by the consumer from rabbitmq">
+      <option name="closed" value="true" />
+      <created>1757302099115</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1757302099115</updated>
+    </task>
+    <task id="LOCAL-00013" summary="edit: now budget is a java bean too">
+      <option name="closed" value="true" />
+      <created>1757390956529</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1757390956529</updated>
+    </task>
+    <task id="LOCAL-00014" summary="edit: entity with annotations">
+      <option name="closed" value="true" />
+      <created>1757390986641</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1757390986641</updated>
+    </task>
+    <task id="LOCAL-00015" summary="edit: added property id for linking between budgets and users">
+      <option name="closed" value="true" />
+      <created>1757391634577</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1757391634577</updated>
+    </task>
+    <task id="LOCAL-00016" summary="add: adding aspects for logging">
+      <option name="closed" value="true" />
+      <created>1757470619153</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1757470619153</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="start: &quot;New project for personal finance&quot;" />
+    <MESSAGE value="add : &quot;foundation of the user , model and controller plus test&quot;" />
+    <MESSAGE value="add : &quot;user service and implementation with dependency injection&quot;" />
+    <MESSAGE value="add : profiles for example (needed to define a SPRING_PROFILES_ACTIVE variable" />
+    <MESSAGE value="add : endpoint with graphql" />
+    <MESSAGE value="add : use of custom exception handler" />
+    <MESSAGE value="add : test case with mockit" />
+    <MESSAGE value="add : producer for rabbitmq" />
+    <MESSAGE value="edit: binded queue to exchange" />
+    <MESSAGE value="edit: reverted this service from producer to consumer" />
+    <MESSAGE value="edit: removed remnants of this service being a producer" />
+    <MESSAGE value="edit: added config to read UserDTO produced by the consumer from rabbitmq" />
+    <MESSAGE value="edit: now budget is a java bean too" />
+    <MESSAGE value="edit: entity with annotations" />
+    <MESSAGE value="edit: added property id for linking between budgets and users" />
+    <MESSAGE value="add: adding aspects for logging" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: adding aspects for logging" />
+  </component>
+</project>
