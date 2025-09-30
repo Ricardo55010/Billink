@@ -4,15 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c3488177-bfdf-46f3-86cf-05d007a42933" name="Changes" comment="add: adding aspects for logging">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/billink/Configurations/WebMvcConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/billink/Interceptors/FilterQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/billink/IntegrationTest/BudgetTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/billink/UnitTest/BudgetControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-local.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-local.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/billink/Test/BudgetControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/billink/MockitoTest/BudgetControllerTest.java" afterDir="false" />
+    <list default="true" id="c3488177-bfdf-46f3-86cf-05d007a42933" name="Changes" comment="add: adding both unitary and integration Test">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/billink/Controllers/ExpenseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/billink/Controllers/IncomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/billink/DTO/BudgetDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/billink/DTO/ExpenseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/billink/DTO/IncomeDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/billink/Mapper/ExpenseMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/billink/Mapper/IncomeMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/billink/Models/Expense.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/billink/Models/Income.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/billink/Repository/ExpenseRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/billink/Repository/IncomeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/billink/Services/ExpenseService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/billink/Services/IncomeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/graphql/schema.gqls" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/graphql/schema.gqls" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,12 +76,13 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/downloads/billink/src/test/java/com/example/billink",
+    "last_opened_file_path": "D:/downloads/billink/src/main/java/com/example/billink/DTO",
     "settings.editor.selected.configurable": "configurable.group.build"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\downloads\billink\src\main\java\com\example\billink\DTO" />
       <recent name="D:\downloads\billink\src\test\java\com\example\billink" />
       <recent name="D:\downloads\billink\src" />
     </key>
@@ -87,12 +95,14 @@
       <recent name="com.example.billink" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.example.billink.Test" />
-      <recent name="com.example.billink.DTO" />
+      <recent name="com.example.billink.Controllers" />
+      <recent name="com.example.billink.Services" />
+      <recent name="com.example.billink.Mapper" />
+      <recent name="com.example.billink.Repository" />
       <recent name="com.example.billink.Models" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserTest">
+  <component name="RunManager" selected="Application.BillinkApplication">
     <configuration name="BillinkApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <envs>
         <env name="SPRING_PROFILES_ACTIVE" value="local" />
@@ -179,10 +189,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BillinkApplication" />
         <item itemvalue="JUnit.UserTest" />
         <item itemvalue="JUnit.BudgetControllerTest.testGetUsers" />
         <item itemvalue="JUnit.BudgetControllerTest" />
-        <item itemvalue="Application.BillinkApplication" />
         <item itemvalue="JUnit.UserControllerTest" />
       </list>
     </recent_temporary>
@@ -324,7 +334,23 @@
       <option name="project" value="LOCAL" />
       <updated>1757470619153</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="add: adding both unitary and integration Test">
+      <option name="closed" value="true" />
+      <created>1758511776872</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1758511776872</updated>
+    </task>
+    <task id="LOCAL-00018" summary="add: adding both unitary and integration Test">
+      <option name="closed" value="true" />
+      <created>1758511800133</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1758511800133</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -344,6 +370,7 @@
     <MESSAGE value="edit: entity with annotations" />
     <MESSAGE value="edit: added property id for linking between budgets and users" />
     <MESSAGE value="add: adding aspects for logging" />
-    <option name="LAST_COMMIT_MESSAGE" value="add: adding aspects for logging" />
+    <MESSAGE value="add: adding both unitary and integration Test" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: adding both unitary and integration Test" />
   </component>
 </project>
