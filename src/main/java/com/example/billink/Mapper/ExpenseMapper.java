@@ -11,6 +11,6 @@ public class ExpenseMapper {
     }
 
     public static Expense mapExpenseDTOToExpense(ExpenseDTO expenseDTO){
-        return new Expense(expenseDTO.getBudgetId(), expenseDTO.getUserId(), expenseDTO.getName(), expenseDTO.getAmount(), expenseDTO.getId());
+        return new Expense(expenseDTO.getBudgetId(), expenseDTO.getUserId(), expenseDTO.getName(), expenseDTO.getAmount());
     }
 }

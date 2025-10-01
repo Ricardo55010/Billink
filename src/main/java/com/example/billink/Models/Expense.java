@@ -24,6 +24,13 @@ public class Expense {
         this.id = id;
     }
 
+    public Expense(Long budgetId, Long userId, String name, Long amount) {
+        this.budgetId = budgetId;
+        this.userId = userId;
+        this.name = name;
+        this.amount = amount;
+    }
+
     public Expense() {
 
     }

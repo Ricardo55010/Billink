@@ -9,6 +9,6 @@ public class IncomeMapper {
     }
 
     public static Income mapIncomeDTOToIncome(IncomeDTO incomeDTO){
-        return new Income(incomeDTO.getBudgetId(), incomeDTO.getUserId(), incomeDTO.getName(), incomeDTO.getAmount(), incomeDTO.getId());
+        return new Income(incomeDTO.getBudgetId(), incomeDTO.getUserId(), incomeDTO.getName(), incomeDTO.getAmount());
     }
 }

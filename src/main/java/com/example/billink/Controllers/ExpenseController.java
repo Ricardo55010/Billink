@@ -30,9 +30,9 @@ public class ExpenseController {
     }
 
     @MutationMapping
-    public ExpenseDTO createExpense(@Argument ExpenseDTO expenseDTO){
+    public ExpenseDTO createExpense(@Argument ExpenseDTO expense){
 
-        return expenseService.createExpense(expenseDTO);
+        return expenseService.createExpense(expense);
     }
     @MutationMapping
     public ExpenseDTO deleteExpense(@Argument int expenseId){
@@ -40,9 +40,9 @@ public class ExpenseController {
         return expenseService.deleteExpense((long)expenseId);
     }
     @MutationMapping
-    public ExpenseDTO updateExpense(@Argument int expenseId,@Argument ExpenseDTO expenseDTO){
+    public ExpenseDTO updateExpense(@Argument int expenseId,@Argument ExpenseDTO expense){
 
-        return expenseService.updateExpense((long)expenseId,expenseDTO);
+        return expenseService.updateExpense((long)expenseId,expense);
     }
 
 }

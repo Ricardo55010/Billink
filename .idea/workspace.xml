@@ -4,22 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c3488177-bfdf-46f3-86cf-05d007a42933" name="Changes" comment="add: adding both unitary and integration Test">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/billink/Controllers/ExpenseController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/billink/Controllers/IncomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/billink/DTO/BudgetDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/billink/DTO/ExpenseDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/billink/DTO/IncomeDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/billink/Mapper/ExpenseMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/billink/Mapper/IncomeMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/billink/Models/Expense.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/billink/Models/Income.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/billink/Repository/ExpenseRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/billink/Repository/IncomeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/billink/Services/ExpenseService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/billink/Services/IncomeService.java" afterDir="false" />
+    <list default="true" id="c3488177-bfdf-46f3-86cf-05d007a42933" name="Changes" comment="edit: added orElseThrow to handle situation where there might not be an entity available">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/graphql/schema.gqls" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/graphql/schema.gqls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/billink/Controllers/ExpenseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/billink/Controllers/ExpenseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/billink/Controllers/IncomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/billink/Controllers/IncomeController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -350,7 +338,23 @@
       <option name="project" value="LOCAL" />
       <updated>1758511800133</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="add: models, service, repository for expense and income">
+      <option name="closed" value="true" />
+      <created>1759208223639</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1759208223639</updated>
+    </task>
+    <task id="LOCAL-00020" summary="edit: added orElseThrow to handle situation where there might not be an entity available">
+      <option name="closed" value="true" />
+      <created>1759291292122</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1759291292122</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -371,6 +375,8 @@
     <MESSAGE value="edit: added property id for linking between budgets and users" />
     <MESSAGE value="add: adding aspects for logging" />
     <MESSAGE value="add: adding both unitary and integration Test" />
-    <option name="LAST_COMMIT_MESSAGE" value="add: adding both unitary and integration Test" />
+    <MESSAGE value="add: models, service, repository for expense and income" />
+    <MESSAGE value="edit: added orElseThrow to handle situation where there might not be an entity available" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit: added orElseThrow to handle situation where there might not be an entity available" />
   </component>
 </project>

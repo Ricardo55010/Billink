@@ -26,8 +26,8 @@ public class IncomeController {
     }
 
     @MutationMapping
-    public IncomeDTO createIncome(@Argument IncomeDTO incomeDTO){
-        return incomeService.createIncome(incomeDTO);
+    public IncomeDTO createIncome(@Argument IncomeDTO income){
+        return incomeService.createIncome(income);
     }
 
     @MutationMapping
@@ -36,7 +36,7 @@ public class IncomeController {
     }
 
     @MutationMapping
-    public IncomeDTO updateIncome(@Argument int incomeId, @Argument IncomeDTO incomeDTO){
-        return incomeService.updateIncome((long) incomeId, incomeDTO);
+    public IncomeDTO updateIncome(@Argument int incomeId, @Argument IncomeDTO income){
+        return incomeService.updateIncome((long) incomeId, income);
     }
 }
