@@ -9,6 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class ExpenseService {
@@ -22,11 +23,13 @@ public class ExpenseService {
         this.rabbitTemplate = rabbitTemplate;
     }
 
+    @Transactional
     public ExpenseDTO getExpense(Long expenseId){
         Expense expense = expenseRepository.findById(expenseId).orElseThrow(()-> new NoSuchElementException("No expense existent to retrieve"));
         return ExpenseMapper.mapExpenseToExpenseDTO(expense);
     }
 
+    @Transactional
     public ExpenseDTO updateExpense(Long expenseId, ExpenseDTO expenseDTO){
         Expense expense = expenseRepository.findById(expenseId).orElseThrow(()-> new NoSuchElementException("No expense existent to be updated"));
         expense.setAmount(expenseDTO.getAmount());
@@ -35,12 +38,14 @@ public class ExpenseService {
         return ExpenseMapper.mapExpenseToExpenseDTO(expense);
     }
 
+    @Transactional
     public ExpenseDTO deleteExpense(Long expenseId){
         Expense expense = expenseRepository.findById(expenseId).orElseThrow(()-> new NoSuchElementException("No expense existent to be deleted"));
         expenseRepository.deleteById(expenseId);
         return ExpenseMapper.mapExpenseToExpenseDTO(expense);
     }
 
+    @Transactional
     public ExpenseDTO createExpense(ExpenseDTO expenseDTO){
         Expense expense = ExpenseMapper.mapExpenseDTOToExpense(expenseDTO);
         expenseRepository.save(expense);

@@ -12,6 +12,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -26,12 +27,14 @@ public class IncomeService {
         this.rabbitTemplate = rabbitTemplate;
     }
 
+    @Transactional
     public IncomeDTO getIncome(Long incomeId){
 
          Income income = incomeRepository.findById(incomeId).orElseThrow(()-> new NoSuchElementException("No income to be retrieved"));
          return IncomeMapper.mapIncomeToIncomeDTO(income);
     }
 
+    @Transactional
     public IncomeDTO updateIncome(Long incomeId, IncomeDTO incomeDTO){
         Income income = incomeRepository.findById(incomeId).orElseThrow(()-> new NoSuchElementException("No income to be updated"));
         income.setAmount(incomeDTO.getAmount());
@@ -40,6 +43,7 @@ public class IncomeService {
         return IncomeMapper.mapIncomeToIncomeDTO(income);
     }
 
+    @Transactional
     public IncomeDTO deleteIncome(Long incomeId){
         Income income = incomeRepository.findById(incomeId).orElseThrow(()-> new NoSuchElementException("No income to be deleted"));
         incomeRepository.deleteById(incomeId);
@@ -47,6 +51,7 @@ public class IncomeService {
 
     }
 
+    @Transactional
     public IncomeDTO createIncome(IncomeDTO incomeDTO){
         Income income = IncomeMapper.mapIncomeDTOToIncome(incomeDTO);
         incomeRepository.save(income);
