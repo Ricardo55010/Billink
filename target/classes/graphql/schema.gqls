@@ -7,12 +7,52 @@ type Budget {
     title: String!
 }
 
+type Income {
+    id: ID!
+    name: String!
+    amount: Int!
+    budgetId: Int!
+    userId: Int!
+}
+
+type Expense {
+    id: ID!
+    name: String!
+    amount: Int!
+    budgetId: Int!
+    userId: Int!
+}
+
+input IncomeInput {
+    id: ID!
+    name: String!
+    amount: Int!
+    budgetId: Int!
+    userId: Int!
+}
+
+input ExpenseInput {
+    id: ID!
+    name: String!
+    amount: Int!
+    budgetId: Int!
+    userId: Int!
+}
+
 # The Root Query for the application
 type Query {
     getBudget(count: Int, offset: Int): [Budget]!
+    getIncome(incomeId: Int): Income!
+    getExpense(expenseId: Int): Expense!
 }
 
 # The Root Mutation for the application
 type Mutation {
     createBudget(title: String!) : Budget!
+    createIncome(income:IncomeInput): Income!
+    updateIncome(incomeId: Int, income: IncomeInput): Income!
+    deleteIncome(incomeId: Int): Income!
+    createExpense(expense:ExpenseInput): Expense!
+    updateExpense(expenseId: Int, expense: ExpenseInput): Income!
+    deleteExpense(expenseId: Int): Expense!
 }

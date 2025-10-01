@@ -1,6 +1,7 @@
 package com.example.billink.Services;
 
 import com.example.billink.DTO.ExpenseDTO;
+import com.example.billink.Exceptions.NoSuchElementException;
 import com.example.billink.Mapper.ExpenseMapper;
 import com.example.billink.Models.Expense;
 import com.example.billink.Repository.ExpenseRepository;
@@ -22,12 +23,12 @@ public class ExpenseService {
     }
 
     public ExpenseDTO getExpense(Long expenseId){
-        Expense expense = expenseRepository.findById(expenseId).get();
+        Expense expense = expenseRepository.findById(expenseId).orElseThrow(()-> new NoSuchElementException("No expense existent to retrieve"));
         return ExpenseMapper.mapExpenseToExpenseDTO(expense);
     }
 
     public ExpenseDTO updateExpense(Long expenseId, ExpenseDTO expenseDTO){
-        Expense expense = expenseRepository.findById(expenseId).get();
+        Expense expense = expenseRepository.findById(expenseId).orElseThrow(()-> new NoSuchElementException("No expense existent to be updated"));
         expense.setAmount(expenseDTO.getAmount());
         expense.setName(expenseDTO.getName());
         expenseRepository.save(expense);
@@ -35,7 +36,7 @@ public class ExpenseService {
     }
 
     public ExpenseDTO deleteExpense(Long expenseId){
-        Expense expense = expenseRepository.findById(expenseId).get();
+        Expense expense = expenseRepository.findById(expenseId).orElseThrow(()-> new NoSuchElementException("No expense existent to be deleted"));
         expenseRepository.deleteById(expenseId);
         return ExpenseMapper.mapExpenseToExpenseDTO(expense);
     }

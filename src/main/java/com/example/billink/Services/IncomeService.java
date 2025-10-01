@@ -1,6 +1,7 @@
 package com.example.billink.Services;
 
 import com.example.billink.DTO.IncomeDTO;
+import com.example.billink.Exceptions.NoSuchElementException;
 import com.example.billink.Mapper.ExpenseMapper;
 import com.example.billink.Mapper.IncomeMapper;
 import com.example.billink.Models.Budget;
@@ -27,12 +28,12 @@ public class IncomeService {
 
     public IncomeDTO getIncome(Long incomeId){
 
-         Income income = incomeRepository.findById(incomeId).get();
+         Income income = incomeRepository.findById(incomeId).orElseThrow(()-> new NoSuchElementException("No income to be retrieved"));
          return IncomeMapper.mapIncomeToIncomeDTO(income);
     }
 
     public IncomeDTO updateIncome(Long incomeId, IncomeDTO incomeDTO){
-        Income income = incomeRepository.findById(incomeId).get();
+        Income income = incomeRepository.findById(incomeId).orElseThrow(()-> new NoSuchElementException("No income to be updated"));
         income.setAmount(incomeDTO.getAmount());
         income.setName(incomeDTO.getName());
         incomeRepository.save(income);
@@ -40,7 +41,7 @@ public class IncomeService {
     }
 
     public IncomeDTO deleteIncome(Long incomeId){
-        Income income = incomeRepository.findById(incomeId).get();
+        Income income = incomeRepository.findById(incomeId).orElseThrow(()-> new NoSuchElementException("No income to be deleted"));
         incomeRepository.deleteById(incomeId);
         return IncomeMapper.mapIncomeToIncomeDTO(income);
 
