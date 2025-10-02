@@ -17,44 +17,14 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service
-public class IncomeService {
-    Logger logger = LoggerFactory.getLogger(IncomeService.class);
-    private final RabbitTemplate rabbitTemplate;
+public interface IncomeService {
 
-    IncomeRepository incomeRepository;
-    public IncomeService(IncomeRepository incomeRepository, RabbitTemplate rabbitTemplate){
-        this.incomeRepository = incomeRepository;
-        this.rabbitTemplate = rabbitTemplate;
-    }
 
-    @Transactional
-    public IncomeDTO getIncome(Long incomeId){
+    public IncomeDTO getIncome(Long incomeId);
 
-         Income income = incomeRepository.findById(incomeId).orElseThrow(()-> new NoSuchElementException("No income to be retrieved"));
-         return IncomeMapper.mapIncomeToIncomeDTO(income);
-    }
+    public IncomeDTO updateIncome(Long incomeId, IncomeDTO incomeDTO);
 
-    @Transactional
-    public IncomeDTO updateIncome(Long incomeId, IncomeDTO incomeDTO){
-        Income income = incomeRepository.findById(incomeId).orElseThrow(()-> new NoSuchElementException("No income to be updated"));
-        income.setAmount(incomeDTO.getAmount());
-        income.setName(incomeDTO.getName());
-        incomeRepository.save(income);
-        return IncomeMapper.mapIncomeToIncomeDTO(income);
-    }
+    public IncomeDTO deleteIncome(Long incomeId);
 
-    @Transactional
-    public IncomeDTO deleteIncome(Long incomeId){
-        Income income = incomeRepository.findById(incomeId).orElseThrow(()-> new NoSuchElementException("No income to be deleted"));
-        incomeRepository.deleteById(incomeId);
-        return IncomeMapper.mapIncomeToIncomeDTO(income);
-
-    }
-
-    @Transactional
-    public IncomeDTO createIncome(IncomeDTO incomeDTO){
-        Income income = IncomeMapper.mapIncomeDTOToIncome(incomeDTO);
-        incomeRepository.save(income);
-        return incomeDTO;
-    }
+    public IncomeDTO createIncome(IncomeDTO incomeDTO);
 }

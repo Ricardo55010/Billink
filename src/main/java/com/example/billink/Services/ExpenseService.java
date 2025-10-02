@@ -12,43 +12,13 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
-public class ExpenseService {
-    Logger logger = LoggerFactory.getLogger(ExpenseService.class);
-    private final RabbitTemplate rabbitTemplate;
+public interface ExpenseService {
 
-    private final ExpenseRepository expenseRepository;
+    public ExpenseDTO getExpense(Long expenseId);
 
-    public ExpenseService(ExpenseRepository expenseRepository, RabbitTemplate rabbitTemplate){
-        this.expenseRepository = expenseRepository;
-        this.rabbitTemplate = rabbitTemplate;
-    }
+    public ExpenseDTO updateExpense(Long expenseId, ExpenseDTO expenseDTO);
 
-    @Transactional
-    public ExpenseDTO getExpense(Long expenseId){
-        Expense expense = expenseRepository.findById(expenseId).orElseThrow(()-> new NoSuchElementException("No expense existent to retrieve"));
-        return ExpenseMapper.mapExpenseToExpenseDTO(expense);
-    }
+    public ExpenseDTO deleteExpense(Long expenseId);
 
-    @Transactional
-    public ExpenseDTO updateExpense(Long expenseId, ExpenseDTO expenseDTO){
-        Expense expense = expenseRepository.findById(expenseId).orElseThrow(()-> new NoSuchElementException("No expense existent to be updated"));
-        expense.setAmount(expenseDTO.getAmount());
-        expense.setName(expenseDTO.getName());
-        expenseRepository.save(expense);
-        return ExpenseMapper.mapExpenseToExpenseDTO(expense);
-    }
-
-    @Transactional
-    public ExpenseDTO deleteExpense(Long expenseId){
-        Expense expense = expenseRepository.findById(expenseId).orElseThrow(()-> new NoSuchElementException("No expense existent to be deleted"));
-        expenseRepository.deleteById(expenseId);
-        return ExpenseMapper.mapExpenseToExpenseDTO(expense);
-    }
-
-    @Transactional
-    public ExpenseDTO createExpense(ExpenseDTO expenseDTO){
-        Expense expense = ExpenseMapper.mapExpenseDTOToExpense(expenseDTO);
-        expenseRepository.save(expense);
-        return expenseDTO;
-    }
+    public ExpenseDTO createExpense(ExpenseDTO expenseDTO);
 }
