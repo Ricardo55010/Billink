@@ -16,8 +16,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-@Service
-public interface IncomeService {
+
+public interface IncomeService{
 
 
     public IncomeDTO getIncome(Long incomeId);

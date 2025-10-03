@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c3488177-bfdf-46f3-86cf-05d007a42933" name="Changes" comment="edit: added transaction for data integrity">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/billink/Aspects/LogControllerAspect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/billink/Aspects/LogRepositoryAspect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/billink/Aspects/LogServiceAspect.java" afterDir="false" />
+    <list default="true" id="c3488177-bfdf-46f3-86cf-05d007a42933" name="Changes" comment="refactor: created interface to ease the testing process">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/billink/Aspects/LogAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/billink/Aspects/LogAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/billink/Aspects/LogAspect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/billink/Aspects/LogAspect.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/billink/Controllers/BudgetController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/billink/Controllers/BudgetController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/billink/Services/BudgetService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/billink/Services/BudgetService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/billink/Aspects/LogAspect.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/billink/Controllers/BudgetController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/billink/Services/BudgetService.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,21 +53,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.BillinkApplication.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.BillinkApplicationTests.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.BudgetControllerTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.BudgetControllerTest.testGetUsers.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserControllerTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserTest.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/downloads/billink/src/main/java/com/example/billink/DTO&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.build&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.BillinkApplication.executor": "Run",
+    "JUnit.BillinkApplicationTests.executor": "Run",
+    "JUnit.BudgetControllerTest (1).executor": "Run",
+    "JUnit.BudgetControllerTest.executor": "Run",
+    "JUnit.BudgetControllerTest.testGetUsers.executor": "Run",
+    "JUnit.BudgetTest.executor": "Run",
+    "JUnit.UserControllerTest.executor": "Run",
+    "JUnit.UserTest.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/downloads/billink/src/main/java/com/example/billink/Services",
+    "settings.editor.selected.configurable": "configurable.group.build"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\downloads\billink\src\main\java\com\example\billink\DTO" />
@@ -90,8 +85,8 @@
       <recent name="com.example.billink" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.example.billink.Controllers" />
       <recent name="com.example.billink.Services" />
+      <recent name="com.example.billink.Controllers" />
       <recent name="com.example.billink.Mapper" />
       <recent name="com.example.billink.Repository" />
       <recent name="com.example.billink.Models" />
@@ -114,16 +109,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BudgetControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BudgetControllerTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="billink" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.billink.MockitoTest.*" />
+          <option name="PATTERN" value="com.example.billink.UnitTest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.billink.Test" />
-      <option name="MAIN_CLASS_NAME" value="com.example.billink.MockitoTest.BudgetControllerTest" />
+      <option name="PACKAGE_NAME" value="com.example.billink.UnitTest" />
+      <option name="MAIN_CLASS_NAME" value="com.example.billink.UnitTest.BudgetControllerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -145,16 +140,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BudgetTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="billink" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.billink.MockitoTest.*" />
+          <option name="PATTERN" value="com.example.billink.IntegrationTest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.billink" />
-      <option name="MAIN_CLASS_NAME" value="com.example.billink.UserControllerTest" />
+      <option name="PACKAGE_NAME" value="com.example.billink.IntegrationTest" />
+      <option name="MAIN_CLASS_NAME" value="com.example.billink.IntegrationTest.BudgetTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -177,18 +172,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.BillinkApplication" />
+      <item itemvalue="JUnit.BudgetControllerTest (1)" />
+      <item itemvalue="JUnit.BudgetTest" />
       <item itemvalue="JUnit.BudgetControllerTest.testGetUsers" />
       <item itemvalue="JUnit.UserTest" />
-      <item itemvalue="JUnit.BudgetControllerTest" />
-      <item itemvalue="JUnit.UserControllerTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.BillinkApplication" />
+        <item itemvalue="JUnit.BudgetTest" />
+        <item itemvalue="JUnit.BudgetControllerTest (1)" />
         <item itemvalue="JUnit.UserTest" />
         <item itemvalue="JUnit.BudgetControllerTest.testGetUsers" />
-        <item itemvalue="JUnit.BudgetControllerTest" />
-        <item itemvalue="JUnit.UserControllerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -385,7 +380,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759292165300</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="refactor: created interface to ease the testing process">
+      <option name="closed" value="true" />
+      <created>1759379807503</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1759379807503</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -410,6 +413,7 @@
     <MESSAGE value="edit: added orElseThrow to handle situation where there might not be an entity available" />
     <MESSAGE value="edit: modified mapper to avoid setting the entity id because it provokes a data condition with the ORM that already handles the increments in IDs" />
     <MESSAGE value="edit: added transaction for data integrity" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit: added transaction for data integrity" />
+    <MESSAGE value="refactor: created interface to ease the testing process" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: created interface to ease the testing process" />
   </component>
 </project>

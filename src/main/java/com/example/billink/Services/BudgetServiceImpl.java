@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service
-public class BudgetServiceImpl {
+public class BudgetServiceImpl  implements BudgetService{
     Logger logger = LoggerFactory.getLogger(BudgetServiceImpl.class);
     private final RabbitTemplate rabbitTemplate;
 

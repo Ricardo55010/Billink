@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
-public class ExpenseServiceImpl {
+public class ExpenseServiceImpl implements ExpenseService {
     Logger logger = LoggerFactory.getLogger(ExpenseServiceImpl.class);
     private final RabbitTemplate rabbitTemplate;
 
