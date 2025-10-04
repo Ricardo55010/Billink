@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c3488177-bfdf-46f3-86cf-05d007a42933" name="Changes" comment="edit: forgot to add the implements keyword in the services">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/billink/IntegrationTest/IncomeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/billink/UnitTest/ExpenseControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/billink/UnitTest/IncomeControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/billink/IntegrationTest/UserTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/billink/MockitoTest/BudgetControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/billink/MockitoTest/BudgetControllerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/billink/UnitTest/BudgetControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/billink/UnitTest/BudgetControllerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/main/resources/graphql/schema.gqls" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/main/resources/graphql/schema.gqls" afterDir="false" />
+    <list default="true" id="c3488177-bfdf-46f3-86cf-05d007a42933" name="Changes" comment="add: unit and integration test for income and expense">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/billink/Aspects/LogRepositoryAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/billink/Aspects/LogRepositoryAspect.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +62,8 @@
     "JUnit.ExpenseControllerTest.testCreateExpense.executor": "Run",
     "JUnit.ExpenseControllerTest.testDeleteExpense.executor": "Run",
     "JUnit.ExpenseControllerTest.testGetExpense.executor": "Run",
+    "JUnit.ExpenseTest.executor": "Run",
+    "JUnit.ExpenseTest.testGetIncome.executor": "Run",
     "JUnit.IncomeControllerTest.executor": "Run",
     "JUnit.IncomeControllerTest.testCreateIncome.executor": "Run",
     "JUnit.IncomeControllerTest.testDeleteIncome.executor": "Run",
@@ -413,7 +408,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759462638638</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="add: unit and integration test for income and expense">
+      <option name="closed" value="true" />
+      <created>1759464860056</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1759464860056</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -440,6 +443,7 @@
     <MESSAGE value="edit: added transaction for data integrity" />
     <MESSAGE value="refactor: created interface to ease the testing process" />
     <MESSAGE value="edit: forgot to add the implements keyword in the services" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit: forgot to add the implements keyword in the services" />
+    <MESSAGE value="add: unit and integration test for income and expense" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: unit and integration test for income and expense" />
   </component>
 </project>
