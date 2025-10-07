@@ -1,5 +1,8 @@
 package com.example.billink.Services;
 
+import com.example.billink.DTO.BudgetDTO;
+import com.example.billink.Exceptions.NoSuchElementException;
+import com.example.billink.Mapper.BudgetMapper;
 import com.example.billink.Models.Budget;
 import com.example.billink.Repository.BudgetRepository;
 import org.slf4j.Logger;
@@ -22,15 +25,16 @@ public class BudgetServiceImpl  implements BudgetService{
     }
 
     @Transactional
-    public List<Budget> getBudget( int count,  int offset ){
-        logger.info("BudgetService.getBudget: Start ");
-        return budgetRepository.findAll();
+    public BudgetDTO getBudget(Long id ){
+        Budget budget = budgetRepository.findById(id).orElseThrow(()->new NoSuchElementException("No budget found"));
+        return BudgetMapper.mapBudgetToBudgetDTO(budget);
     }
 
     @Transactional
-    public Budget createBudget(String title){
-        Budget budget = new Budget(title, 1L);
-        budgetRepository.save(budget);
-        return budget;
+    public BudgetDTO createBudget(String title){
+        Budget budget = new Budget(title);
+        logger.info("esto" + title);
+        budgetRepository.saveAndFlush(budget);
+        return BudgetMapper.mapBudgetToBudgetDTO(budget);
     }
 }

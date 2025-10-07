@@ -53,7 +53,7 @@ public class RabbitMQConfig {
     @RabbitListener(queues = QUEUE_NAME)
     public void listen(UserDTO userDTO) {
         System.out.println("Received message: " + userDTO);
-        budgetRepository.save(new Budget("Primero",userDTO.getId()));
+        budgetRepository.save(new Budget("Primero"));
     }
 
 }

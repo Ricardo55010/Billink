@@ -1,5 +1,6 @@
 package com.example.billink.Controllers;
 
+import com.example.billink.DTO.BudgetDTO;
 import com.example.billink.Exceptions.NoSuchElementException;
 import com.example.billink.Models.Budget;
 import com.example.billink.Services.BudgetService;
@@ -23,11 +24,8 @@ public class BudgetController {
         this.budgetService = budgetService;
     }
     @QueryMapping
-    public List<Budget> getBudget(@Argument int count, @Argument int offset ) throws NoSuchElementException{
-        logger.info("BudgetController-getBudget: Start");
-        if(count ==1)
-            throw new NoSuchElementException("No hay");
-        return budgetService.getBudget(count,offset);
+    public BudgetDTO getBudget(@Argument int id ) throws NoSuchElementException{
+        return budgetService.getBudget((long)id);
     }
 /*
 * {
@@ -38,8 +36,8 @@ public class BudgetController {
 }
 }*/
     @MutationMapping
-    public Budget createBudget(@Argument String title){
-        Budget budget = budgetService.createBudget(title);
+    public BudgetDTO createBudget(@Argument String title){
+        BudgetDTO budget = budgetService.createBudget(title);
         return budget;
     }
     /*

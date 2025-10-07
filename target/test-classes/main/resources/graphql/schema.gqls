@@ -41,7 +41,7 @@ input ExpenseInput {
 
 # The Root Query for the application
 type Query {
-    getBudget(count: Int, offset: Int): [Budget]!
+    getBudget(id: Int): Budget!
     getIncome(incomeId: Int): Income!
     getExpense(expenseId: Int): Expense!
 }

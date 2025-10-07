@@ -4,8 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c3488177-bfdf-46f3-86cf-05d007a42933" name="Changes" comment="add: unit and integration test for income and expense">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/billink/Aspects/LogRepositoryAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/billink/Aspects/LogRepositoryAspect.java" afterDir="false" />
+    <list default="true" id="c3488177-bfdf-46f3-86cf-05d007a42933" name="Changes" comment="refactor: use of Pointcut notation to centralize the value of the condition for the logging">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/billink/Mapper/BudgetMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/billink/Configurations/RabbitMQConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/billink/Configurations/RabbitMQConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/billink/Controllers/BudgetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/billink/Controllers/BudgetController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/billink/Models/Budget.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/billink/Models/Budget.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/billink/Models/Expense.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/billink/Models/Expense.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/billink/Models/Income.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/billink/Models/Income.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/billink/Services/BudgetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/billink/Services/BudgetService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/billink/Services/BudgetServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/billink/Services/BudgetServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/billink/Services/ExpenseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/billink/Services/ExpenseServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/billink/Services/IncomeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/billink/Services/IncomeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-local.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-local.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/graphql/schema.gqls" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/graphql/schema.gqls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/billink/IntegrationTest/BudgetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/billink/IntegrationTest/BudgetTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/billink/IntegrationTest/ExpenseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/billink/IntegrationTest/ExpenseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/billink/UnitTest/BudgetControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/billink/UnitTest/BudgetControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/billink/Controllers/BudgetController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/billink/Controllers/BudgetController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/billink/Models/Budget.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/billink/Models/Budget.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/billink/Services/BudgetService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/billink/Services/BudgetService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/graphql/schema.gqls" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/graphql/schema.gqls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/billink/Configurations/RabbitMQConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/billink/Models/Budget.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/billink/Repository/BudgetRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/billink/UnitTest/BudgetControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/billink/UnitTest/BudgetControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/billink/UnitTest/BudgetTestConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/billink/UnitTest/BudgetTestConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/main/resources/graphql/schema.gqls" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/main/resources/graphql/schema.gqls" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +84,7 @@
     "JUnit.BudgetControllerTest.executor": "Run",
     "JUnit.BudgetControllerTest.testGetUsers.executor": "Run",
     "JUnit.BudgetTest.executor": "Run",
+    "JUnit.ExpenseControllerTest.executor": "Run",
     "JUnit.ExpenseControllerTest.testCreateExpense.executor": "Run",
     "JUnit.ExpenseControllerTest.testDeleteExpense.executor": "Run",
     "JUnit.ExpenseControllerTest.testGetExpense.executor": "Run",
@@ -96,15 +122,58 @@
       <recent name="com.example.billink" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.billink.Mapper" />
       <recent name="com.example.billink.IntegrationTest" />
       <recent name="com.example.billink.Services" />
       <recent name="com.example.billink.Controllers" />
-      <recent name="com.example.billink.Mapper" />
       <recent name="com.example.billink.Repository" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ExpenseTest">
-    <configuration name="ExpenseControllerTest.testCreateExpense" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.BillinkApplication">
+    <configuration name="BillinkApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.billink.BillinkApplication" />
+      <module name="billink" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.billink.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BudgetControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="billink" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.billink.UnitTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.billink.UnitTest" />
+      <option name="MAIN_CLASS_NAME" value="com.example.billink.UnitTest.BudgetControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BudgetTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="billink" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.billink.IntegrationTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.billink.IntegrationTest" />
+      <option name="MAIN_CLASS_NAME" value="com.example.billink.IntegrationTest.BudgetTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExpenseControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="billink" />
       <extension name="coverage">
         <pattern>
@@ -114,8 +183,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.example.billink.UnitTest" />
       <option name="MAIN_CLASS_NAME" value="com.example.billink.UnitTest.ExpenseControllerTest" />
-      <option name="METHOD_NAME" value="testCreateExpense" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -135,67 +203,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExpenseTest.testGetIncome" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="billink" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.billink.IntegrationTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.billink.IntegrationTest" />
-      <option name="MAIN_CLASS_NAME" value="com.example.billink.IntegrationTest.ExpenseTest" />
-      <option name="METHOD_NAME" value="testGetIncome" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="IncomeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="billink" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.billink.IntegrationTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.billink.IntegrationTest" />
-      <option name="MAIN_CLASS_NAME" value="com.example.billink.IntegrationTest.IncomeTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="IncomeTest.testGetBudgets" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="billink" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.billink.IntegrationTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.billink.IntegrationTest" />
-      <option name="MAIN_CLASS_NAME" value="com.example.billink.IntegrationTest.IncomeTest" />
-      <option name="METHOD_NAME" value="testGetBudgets" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="JUnit.ExpenseControllerTest.testCreateExpense" />
+      <item itemvalue="Application.BillinkApplication" />
+      <item itemvalue="JUnit.BudgetControllerTest" />
+      <item itemvalue="JUnit.BudgetTest" />
+      <item itemvalue="JUnit.ExpenseControllerTest" />
       <item itemvalue="JUnit.ExpenseTest" />
-      <item itemvalue="JUnit.ExpenseTest.testGetIncome" />
-      <item itemvalue="JUnit.IncomeTest" />
-      <item itemvalue="JUnit.IncomeTest.testGetBudgets" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BillinkApplication" />
         <item itemvalue="JUnit.ExpenseTest" />
-        <item itemvalue="JUnit.ExpenseTest.testGetIncome" />
-        <item itemvalue="JUnit.IncomeTest.testGetBudgets" />
-        <item itemvalue="JUnit.IncomeTest" />
-        <item itemvalue="JUnit.ExpenseControllerTest.testCreateExpense" />
+        <item itemvalue="JUnit.BudgetTest" />
+        <item itemvalue="JUnit.ExpenseControllerTest" />
+        <item itemvalue="JUnit.BudgetControllerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -416,7 +437,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759464860056</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="refactor: use of Pointcut notation to centralize the value of the condition for the logging">
+      <option name="closed" value="true" />
+      <created>1759554699635</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1759554699635</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -444,6 +473,7 @@
     <MESSAGE value="refactor: created interface to ease the testing process" />
     <MESSAGE value="edit: forgot to add the implements keyword in the services" />
     <MESSAGE value="add: unit and integration test for income and expense" />
-    <option name="LAST_COMMIT_MESSAGE" value="add: unit and integration test for income and expense" />
+    <MESSAGE value="refactor: use of Pointcut notation to centralize the value of the condition for the logging" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: use of Pointcut notation to centralize the value of the condition for the logging" />
   </component>
 </project>

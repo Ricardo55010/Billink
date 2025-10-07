@@ -2,8 +2,12 @@ package com.example.billink.Services;
 
 import com.example.billink.DTO.IncomeDTO;
 import com.example.billink.Exceptions.NoSuchElementException;
+import com.example.billink.Mapper.ExpenseMapper;
 import com.example.billink.Mapper.IncomeMapper;
+import com.example.billink.Models.Budget;
+import com.example.billink.Models.Expense;
 import com.example.billink.Models.Income;
+import com.example.billink.Repository.BudgetRepository;
 import com.example.billink.Repository.IncomeRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,15 +15,19 @@ import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
+
 @Service
 public class IncomeServiceImpl implements IncomeService{
     Logger logger = LoggerFactory.getLogger(IncomeServiceImpl.class);
     private final RabbitTemplate rabbitTemplate;
 
     IncomeRepository incomeRepository;
-    public IncomeServiceImpl(IncomeRepository incomeRepository, RabbitTemplate rabbitTemplate){
+    BudgetRepository budgetRepository;
+    public IncomeServiceImpl(IncomeRepository incomeRepository, BudgetRepository budgetRepository, RabbitTemplate rabbitTemplate){
         this.incomeRepository = incomeRepository;
         this.rabbitTemplate = rabbitTemplate;
+        this.budgetRepository = budgetRepository;
     }
 
     @Transactional
@@ -49,7 +57,15 @@ public class IncomeServiceImpl implements IncomeService{
     @Transactional
     public IncomeDTO createIncome(IncomeDTO incomeDTO){
         Income income = IncomeMapper.mapIncomeDTOToIncome(incomeDTO);
-        incomeRepository.save(income);
+        Budget budget = budgetRepository.findById(incomeDTO.getBudgetId()).orElseThrow(()->new NoSuchElementException("No budget existent"));
+        if(budget.getIncomeList()!=null){
+            budget.getIncomeList().add(income);
+        }
+        else{
+            budget.setIncomeList(new ArrayList<>());
+            budget.getIncomeList().add(income);
+        }
+        budgetRepository.save(budget);
         return incomeDTO;
     }
 }

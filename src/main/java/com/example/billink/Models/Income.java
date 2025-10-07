@@ -1,17 +1,17 @@
 package com.example.billink.Models;import jakarta.persistence.*;
 
 @Entity
-@Table(name="Income")
+@Table(name="income")
 public class Income {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="Id")
+    @Column(name="id")
     private Long id;
     @Column(name="amount")
     private Long amount;
-    @Column(name="budgetId")
+    @Column(name="budget_id")
     private Long budgetId;
-    @Column(name="userId")
+    @Column(name="user_id")
     private Long userId;
     @Column(name="name")
     private String name;

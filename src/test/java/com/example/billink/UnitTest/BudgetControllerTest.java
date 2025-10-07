@@ -32,15 +32,13 @@ public class BudgetControllerTest {
     @Test
     void testGetUsers(){
 
-        List<Budget> budget = new ArrayList<>();
-        budget.add(new Budget("Example",1L));
-        budget.add(new Budget("Example",2L));
-        when(budgetService.getBudget(any(int.class),any(int.class))).thenReturn(budget);
+        Budget budget = new Budget("Example",2L);
+        when(budgetService.getBudget(any(long.class))).thenReturn(budget);
 
-        graphQlTester.document("{ getBudget(count: 5, offset:10) { title } }")
-                .execute().path("getBudget").entityList(
-                        Budget.class
-                ).hasSize(budget.size());
+        graphQlTester.document("{ getBudget(id:2) { title } }")
+                .execute().path("getBudget.title").entity(
+                        String.class
+                ).isEqualTo(budget.getTitle());
     }
 
 

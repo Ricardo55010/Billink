@@ -40,7 +40,7 @@ public class BudgetTest {
         //path let us specify the field we want to compare starting from the query name
         //entity or entitylist depend on the amount of results, but helps us to do the mapping
         //isEqualTo let us do some testing*/
-        graphQlTester.document("{ getBudget(count: 5, offset:10) { title } }")
+        graphQlTester.document("{ getBudget(id: 1) { title } }")
                 .execute().path("getBudget").entityList(
                         Budget.class
                 ).hasSize(0);

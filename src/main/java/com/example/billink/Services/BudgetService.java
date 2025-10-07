@@ -1,5 +1,6 @@
 package com.example.billink.Services;
 
+import com.example.billink.DTO.BudgetDTO;
 import com.example.billink.Models.Budget;
 import com.example.billink.Repository.BudgetRepository;
 import org.slf4j.Logger;
@@ -14,6 +15,6 @@ import java.util.List;
 public interface BudgetService {
 
 
-    public List<Budget> getBudget( int count,  int offset );
-    public Budget createBudget(String title);
+    public BudgetDTO getBudget(Long id);
+    public  BudgetDTO createBudget(String title);
 }

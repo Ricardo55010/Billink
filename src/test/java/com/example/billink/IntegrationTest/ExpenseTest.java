@@ -46,5 +46,6 @@ public class ExpenseTest {
                 .execute().path("getExpense.name").entity(
                         String.class
                 ).isEqualTo("Richard");
+        //need to validate the no budget existent
     }
 }
