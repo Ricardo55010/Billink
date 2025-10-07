@@ -1,2 +1,25 @@
+spring:
+  datasource:
+    url: jdbc:mysql://${DB_HOST:localhost}:3306/${DB_NAME:budget}?createDatabaseIfNotExist=true&useSSL=false
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:Ricardo55010}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+  graphql:
+    graphiql:
+      enabled: true
+  application:
+    name: producer-service
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 server:
   port: 9000
