@@ -1,6 +1,7 @@
 package com.example.billink.Models;import jakarta.persistence.*;
 import org.springframework.graphql.data.federation.EntityMapping;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -18,12 +19,12 @@ public class Budget {
     @JoinTable(name = "budget_income",
             joinColumns = @JoinColumn(name="budget_id"),
             inverseJoinColumns = @JoinColumn(name="income_id") )
-    private List<Income> incomeList;
+    private List<Income> incomeList = new ArrayList<>();
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinTable(name = "Budget_Expense",
             joinColumns = @JoinColumn(name="budget_id"),
             inverseJoinColumns = @JoinColumn(name="expense_id") )
-    private List<Expense> expenseList;
+    private List<Expense> expenseList = new ArrayList<>();
 
 
     public Budget(String title) {

@@ -58,13 +58,7 @@ public class IncomeServiceImpl implements IncomeService{
     public IncomeDTO createIncome(IncomeDTO incomeDTO){
         Income income = IncomeMapper.mapIncomeDTOToIncome(incomeDTO);
         Budget budget = budgetRepository.findById(incomeDTO.getBudgetId()).orElseThrow(()->new NoSuchElementException("No budget existent"));
-        if(budget.getIncomeList()!=null){
-            budget.getIncomeList().add(income);
-        }
-        else{
-            budget.setIncomeList(new ArrayList<>());
-            budget.getIncomeList().add(income);
-        }
+        budget.getIncomeList().add(income);
         budgetRepository.save(budget);
         return incomeDTO;
     }

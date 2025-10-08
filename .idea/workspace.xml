@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c3488177-bfdf-46f3-86cf-05d007a42933" name="Changes" comment="refactor: changed endpoints to make receive appropiate data, and change the budget structure to have oneToMany relationship with the incomes and expenses">
+    <list default="true" id="c3488177-bfdf-46f3-86cf-05d007a42933" name="Changes" comment="edit: adjusted to make table generation possible">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/billink/Configurations/RabbitMQConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/billink/Configurations/RabbitMQConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -430,11 +429,18 @@
       <option name="project" value="LOCAL" />
       <updated>1759813489072</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="edit: adjusted to make table generation possible">
+      <option name="closed" value="true" />
+      <created>1759814813810</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1759814813810</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add : &quot;foundation of the user , model and controller plus test&quot;" />
     <MESSAGE value="add : &quot;user service and implementation with dependency injection&quot;" />
     <MESSAGE value="add : profiles for example (needed to define a SPRING_PROFILES_ACTIVE variable" />
     <MESSAGE value="add : endpoint with graphql" />
@@ -459,6 +465,7 @@
     <MESSAGE value="add: unit and integration test for income and expense" />
     <MESSAGE value="refactor: use of Pointcut notation to centralize the value of the condition for the logging" />
     <MESSAGE value="refactor: changed endpoints to make receive appropiate data, and change the budget structure to have oneToMany relationship with the incomes and expenses" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: changed endpoints to make receive appropiate data, and change the budget structure to have oneToMany relationship with the incomes and expenses" />
+    <MESSAGE value="edit: adjusted to make table generation possible" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit: adjusted to make table generation possible" />
   </component>
 </project>

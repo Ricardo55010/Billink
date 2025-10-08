@@ -55,13 +55,7 @@ public class ExpenseServiceImpl implements ExpenseService {
     public ExpenseDTO createExpense(ExpenseDTO expenseDTO){
         Expense expense = ExpenseMapper.mapExpenseDTOToExpense(expenseDTO);
         Budget budget = budgetRepository.findById(expenseDTO.getBudgetId()).orElseThrow(()->new NoSuchElementException("No budget existent"));
-        if(budget.getExpenseList()!=null){
-            budget.getExpenseList().add(expense);
-        }
-        else{
-            budget.setExpenseList(new ArrayList<>());
-            budget.getExpenseList().add(expense);
-        }
+        budget.getExpenseList().add(expense);
         budgetRepository.save(budget);
         return expenseDTO;
     }
