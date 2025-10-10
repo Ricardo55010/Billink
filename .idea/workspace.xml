@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c3488177-bfdf-46f3-86cf-05d007a42933" name="Changes" comment="edit: adjusted to make table generation possible">
+    <list default="true" id="c3488177-bfdf-46f3-86cf-05d007a42933" name="Changes" comment="refactor: add initialization of arraylist to avoid validation of a null list">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/billink/IntegrationTest/BudgetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/billink/IntegrationTest/BudgetTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/billink/MockitoTest/BudgetControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/billink/MockitoTest/BudgetControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/billink/UnitTest/BudgetControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/billink/UnitTest/BudgetControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/billink/MockitoTest/BudgetControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/billink/MockitoTest/BudgetControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/billink/UnitTest/BudgetControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/billink/UnitTest/BudgetControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/billink/UnitTest/BudgetTestConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/billink/UnitTest/BudgetTestConfig.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,8 +63,10 @@
     "JUnit.BillinkApplicationTests.executor": "Run",
     "JUnit.BudgetControllerTest (1).executor": "Run",
     "JUnit.BudgetControllerTest.executor": "Run",
+    "JUnit.BudgetControllerTest.testBudgetController.executor": "Run",
     "JUnit.BudgetControllerTest.testGetUsers.executor": "Run",
     "JUnit.BudgetTest.executor": "Run",
+    "JUnit.BudgetTest.testGetBudgets.executor": "Run",
     "JUnit.ExpenseControllerTest.executor": "Run",
     "JUnit.ExpenseControllerTest.testCreateExpense.executor": "Run",
     "JUnit.ExpenseControllerTest.testDeleteExpense.executor": "Run",
@@ -105,20 +112,7 @@
       <recent name="com.example.billink.Repository" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.BillinkApplication">
-    <configuration name="BillinkApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.billink.BillinkApplication" />
-      <module name="billink" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.billink.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.IncomeTest">
     <configuration name="BudgetControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="billink" />
       <extension name="coverage">
@@ -134,7 +128,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BudgetTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BudgetTest.testGetBudgets" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="billink" />
       <extension name="coverage">
         <pattern>
@@ -144,7 +138,8 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.example.billink.IntegrationTest" />
       <option name="MAIN_CLASS_NAME" value="com.example.billink.IntegrationTest.BudgetTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="testGetBudgets" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -164,7 +159,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExpenseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ExpenseTest.testGetIncome" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="billink" />
       <extension name="coverage">
         <pattern>
@@ -174,25 +169,41 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.example.billink.IntegrationTest" />
       <option name="MAIN_CLASS_NAME" value="com.example.billink.IntegrationTest.ExpenseTest" />
+      <option name="METHOD_NAME" value="testGetIncome" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IncomeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="billink" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.billink.IntegrationTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.billink.IntegrationTest" />
+      <option name="MAIN_CLASS_NAME" value="com.example.billink.IntegrationTest.IncomeTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.BillinkApplication" />
+      <item itemvalue="JUnit.BudgetTest.testGetBudgets" />
+      <item itemvalue="JUnit.ExpenseTest.testGetIncome" />
+      <item itemvalue="JUnit.IncomeTest" />
       <item itemvalue="JUnit.BudgetControllerTest" />
-      <item itemvalue="JUnit.BudgetTest" />
       <item itemvalue="JUnit.ExpenseControllerTest" />
-      <item itemvalue="JUnit.ExpenseTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.BillinkApplication" />
-        <item itemvalue="JUnit.ExpenseTest" />
-        <item itemvalue="JUnit.BudgetTest" />
-        <item itemvalue="JUnit.ExpenseControllerTest" />
+        <item itemvalue="JUnit.IncomeTest" />
+        <item itemvalue="JUnit.ExpenseTest.testGetIncome" />
+        <item itemvalue="JUnit.BudgetTest.testGetBudgets" />
         <item itemvalue="JUnit.BudgetControllerTest" />
+        <item itemvalue="JUnit.ExpenseControllerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -437,11 +448,18 @@
       <option name="project" value="LOCAL" />
       <updated>1759814813810</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="refactor: add initialization of arraylist to avoid validation of a null list">
+      <option name="closed" value="true" />
+      <created>1759896458291</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1759896458291</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add : &quot;user service and implementation with dependency injection&quot;" />
     <MESSAGE value="add : profiles for example (needed to define a SPRING_PROFILES_ACTIVE variable" />
     <MESSAGE value="add : endpoint with graphql" />
     <MESSAGE value="add : use of custom exception handler" />
@@ -466,6 +484,7 @@
     <MESSAGE value="refactor: use of Pointcut notation to centralize the value of the condition for the logging" />
     <MESSAGE value="refactor: changed endpoints to make receive appropiate data, and change the budget structure to have oneToMany relationship with the incomes and expenses" />
     <MESSAGE value="edit: adjusted to make table generation possible" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit: adjusted to make table generation possible" />
+    <MESSAGE value="refactor: add initialization of arraylist to avoid validation of a null list" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: add initialization of arraylist to avoid validation of a null list" />
   </component>
 </project>

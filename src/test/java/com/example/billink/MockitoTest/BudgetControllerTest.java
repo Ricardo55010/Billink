@@ -1,6 +1,7 @@
 package com.example.billink.MockitoTest;
 
 import com.example.billink.Controllers.BudgetController;
+import com.example.billink.DTO.BudgetDTO;
 import com.example.billink.Models.Budget;
 import com.example.billink.Services.BudgetService;
 import org.junit.jupiter.api.Assertions;
@@ -21,9 +22,9 @@ public class BudgetControllerTest {
     @Test
     void testBudgetController(){
 
-        Budget budget1 = new Budget("si",2L);
+        BudgetDTO budget1 = new BudgetDTO("si",1L);
         given(budgetService.createBudget("si")).willReturn(budget1);
-        Budget budget = budgetController.createBudget("si");
+        BudgetDTO budget = budgetController.createBudget("si");
         Assertions.assertNotNull(budget);
     }
 }

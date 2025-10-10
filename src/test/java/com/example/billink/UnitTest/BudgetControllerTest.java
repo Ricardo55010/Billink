@@ -1,6 +1,7 @@
 package com.example.billink.UnitTest;
 
 import com.example.billink.Controllers.BudgetController;
+import com.example.billink.DTO.BudgetDTO;
 import com.example.billink.Models.Budget;
 import com.example.billink.Services.BudgetService;
 import org.junit.jupiter.api.Test;
@@ -32,7 +33,7 @@ public class BudgetControllerTest {
     @Test
     void testGetUsers(){
 
-        Budget budget = new Budget("Example",2L);
+        BudgetDTO budget = new BudgetDTO("Example",2L);
         when(budgetService.getBudget(any(long.class))).thenReturn(budget);
 
         graphQlTester.document("{ getBudget(id:2) { title } }")

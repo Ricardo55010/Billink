@@ -1,6 +1,7 @@
 package com.example.billink.IntegrationTest;
 
 import com.example.billink.BillinkApplication;
+import com.example.billink.Models.Budget;
 import com.example.billink.Services.BudgetService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -39,6 +40,10 @@ public class ExpenseTest {
         //path let us specify the field we want to compare starting from the query name
         //entity or entitylist depend on the amount of results, but helps us to do the mapping
         //isEqualTo let us do some testing*/
+        graphQlTester.document("mutation { createBudget(title: \"Example\") { title } }")
+                .execute().path("createBudget").entity(
+                        Budget.class
+                ).isNotEqualTo(null);
         graphQlTester.document("mutation { createExpense(expense: {id:1 ,name:\"Richard\", userId: 1, budgetId:1, amount:1}) { id name } }")
                 .execute()
                 .path("createExpense.name").entity(String.class).isEqualTo("Richard");
@@ -46,6 +51,6 @@ public class ExpenseTest {
                 .execute().path("getExpense.name").entity(
                         String.class
                 ).isEqualTo("Richard");
-        //need to validate the no budget existent
+
     }
 }

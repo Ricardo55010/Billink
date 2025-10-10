@@ -41,6 +41,10 @@ public class IncomeTest {
         //path let us specify the field we want to compare starting from the query name
         //entity or entitylist depend on the amount of results, but helps us to do the mapping
         //isEqualTo let us do some testing*/
+        graphQlTester.document("mutation { createBudget(title: \"Example\") { title } }")
+                .execute().path("createBudget").entity(
+                        Budget.class
+                ).isNotEqualTo(null);
         graphQlTester.document("mutation { createIncome(income: {id:1 ,name:\"Richard\", userId: 1, budgetId:1, amount:1}) { id name } }")
                 .execute()
                 .path("createIncome.name").entity(String.class).isEqualTo("Richard");
