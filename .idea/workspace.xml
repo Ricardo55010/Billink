@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c3488177-bfdf-46f3-86cf-05d007a42933" name="Changes" comment="refactor: add initialization of arraylist to avoid validation of a null list">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/billink/IntegrationTest/BudgetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/billink/IntegrationTest/BudgetTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/billink/MockitoTest/BudgetControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/billink/MockitoTest/BudgetControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/billink/UnitTest/BudgetControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/billink/UnitTest/BudgetControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/billink/MockitoTest/BudgetControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/billink/MockitoTest/BudgetControllerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/billink/UnitTest/BudgetControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/billink/UnitTest/BudgetControllerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/billink/UnitTest/BudgetTestConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/billink/UnitTest/BudgetTestConfig.class" afterDir="false" />
-    </list>
+    <list default="true" id="c3488177-bfdf-46f3-86cf-05d007a42933" name="Changes" comment="edit: adjusted test to work with the new use of dto instead of the entity class" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -456,11 +448,18 @@
       <option name="project" value="LOCAL" />
       <updated>1759896458291</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="edit: adjusted test to work with the new use of dto instead of the entity class">
+      <option name="closed" value="true" />
+      <created>1760068972903</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1760068972903</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add : profiles for example (needed to define a SPRING_PROFILES_ACTIVE variable" />
     <MESSAGE value="add : endpoint with graphql" />
     <MESSAGE value="add : use of custom exception handler" />
     <MESSAGE value="add : test case with mockit" />
@@ -485,6 +484,7 @@
     <MESSAGE value="refactor: changed endpoints to make receive appropiate data, and change the budget structure to have oneToMany relationship with the incomes and expenses" />
     <MESSAGE value="edit: adjusted to make table generation possible" />
     <MESSAGE value="refactor: add initialization of arraylist to avoid validation of a null list" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: add initialization of arraylist to avoid validation of a null list" />
+    <MESSAGE value="edit: adjusted test to work with the new use of dto instead of the entity class" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit: adjusted test to work with the new use of dto instead of the entity class" />
   </component>
 </project>
