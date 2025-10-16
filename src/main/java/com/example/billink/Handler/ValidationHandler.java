@@ -1,6 +1,7 @@
 package com.example.billink.Handler;
 
 import com.example.billink.Exceptions.NoSuchElementException;
+import com.example.billink.Exceptions.NoValidIdempotencyKey;
 import com.example.billink.Models.Budget;
 import graphql.GraphQLError;
 import org.springframework.graphql.data.method.annotation.GraphQlExceptionHandler;
@@ -20,6 +21,14 @@ public class ValidationHandler {
 
     @GraphQlExceptionHandler(NoSuchElementException.class)
     public GraphQLError handleValidationExceptions(NoSuchElementException e) {
+
+        return GraphQLError.newError()
+                .errorType(ErrorType.INTERNAL_ERROR)
+                .message(e.getMessage())
+                .build();
+    }
+    @GraphQlExceptionHandler(NoValidIdempotencyKey.class)
+    public GraphQLError handleNoValidIdempotencyKey(NoValidIdempotencyKey e) {
 
         return GraphQLError.newError()
                 .errorType(ErrorType.INTERNAL_ERROR)

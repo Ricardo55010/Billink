@@ -6,11 +6,10 @@ import com.example.billink.Models.Budget;
 import com.example.billink.Services.BudgetService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.graphql.data.method.annotation.Argument;
-import org.springframework.graphql.data.method.annotation.MutationMapping;
-import org.springframework.graphql.data.method.annotation.QueryMapping;
+import org.springframework.graphql.data.method.annotation.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
+import org.springframework.web.bind.annotation.RequestHeader;
 
 import java.awt.image.BufferStrategy;
 import java.util.ArrayList;
@@ -36,8 +35,8 @@ public class BudgetController {
 }
 }*/
     @MutationMapping
-    public BudgetDTO createBudget(@Argument String title){
-        BudgetDTO budget = budgetService.createBudget(title);
+    public BudgetDTO createBudget(@Argument String title, @ContextValue("idempotency-key") String idempotencyKey){
+        BudgetDTO budget = budgetService.createBudget(idempotencyKey, title);
         return budget;
     }
     /*

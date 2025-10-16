@@ -16,5 +16,5 @@ public interface BudgetService {
 
 
     public BudgetDTO getBudget(Long id);
-    public  BudgetDTO createBudget(String title);
+    public  BudgetDTO createBudget(String idempotencyKey,String title);
 }
