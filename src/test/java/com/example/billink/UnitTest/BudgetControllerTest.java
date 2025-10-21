@@ -4,7 +4,10 @@ import com.example.billink.Controllers.BudgetController;
 import com.example.billink.DTO.BudgetDTO;
 import com.example.billink.Models.Budget;
 import com.example.billink.Services.BudgetService;
+import jakarta.servlet.http.HttpServletRequest;
 import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.graphql.GraphQlTest;
@@ -30,12 +33,16 @@ public class BudgetControllerTest {
     private GraphQlTester graphQlTester;
     @Autowired
     private BudgetService budgetService;
+    @Autowired
+    private HttpServletRequest httpServletRequest;
+
     @Test
     void testGetUsers(){
 
         BudgetDTO budget = new BudgetDTO("Example",2L);
         when(budgetService.getBudget(any(long.class))).thenReturn(budget);
-
+        String header = "simple";
+        when(httpServletRequest.getHeader(null)).thenReturn(header);
         graphQlTester.document("{ getBudget(id:2) { title } }")
                 .execute().path("getBudget.title").entity(
                         String.class
@@ -53,5 +60,11 @@ class BudgetTestConfig {
     @Primary
     BudgetService budgetService() {
         return Mockito.mock(BudgetService.class);
+    }
+
+    @Bean
+    @Primary
+    HttpServletRequest httpServletRequest() {
+        return Mockito.mock(HttpServletRequest.class);
     }
 }
